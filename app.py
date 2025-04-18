@@ -9,7 +9,8 @@ app = Flask(__name__)
 
 # Charger les variables d'environnement
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 # Charger la FAQ
 try:
@@ -34,7 +35,8 @@ def find_answer(user_input):
 # Fallback : Utiliser OpenAI si la FAQ n'a pas de réponse
 def ask_openai(question):
     try:
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
+
             model="gpt-3.5-turbo",
             messages=[
                 {
