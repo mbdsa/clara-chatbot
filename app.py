@@ -56,7 +56,8 @@ def ask_openai(question):
         return response.choices[0].message.content.strip()
     except Exception as e:
         print(f"Erreur API OpenAI : {e}")
-        return "Je suis désolée, une erreur est survenue. Veuillez réessayer plus tard."
+        return "Je ne suis pas certaine de la réponse. Vous pouvez me contacter par e-mail ou via le formulaire si besoin."
+
 
 @app.route('/')
 def index():
