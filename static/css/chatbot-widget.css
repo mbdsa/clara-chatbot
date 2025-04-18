@@ -1,0 +1,105 @@
+.chatbot-avatar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .chatbot-avatar img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #7ACCB1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .chatbot-widget {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 340px;
+    max-height: 500px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1001;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .chatbot-header {
+    background-color: #7ACCB1;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f9f9f9;
+  }
+  
+  .chatbot-input {
+    display: flex;
+    border-top: 1px solid #eee;
+    padding: 10px;
+    background: #fff;
+  }
+  
+  .chatbot-input input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .chatbot-input button {
+    background-color: #7ACCB1;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .chatbot-input button:hover {
+    background-color: #69bfa0;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    max-width: 85%;
+    line-height: 1.4;
+  }
+  
+  .message.user {
+    background-color: #DCF8C6;
+    align-self: flex-end;
+  }
+  
+  .message.bot {
+    background-color: #E6F4F1;
+    align-self: flex-start;
+  }
+  
+  /* Avatar flottant */
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+  }
+  
