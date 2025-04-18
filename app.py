@@ -2,7 +2,8 @@ from flask import Flask, render_template, request, jsonify
 import json
 import os
 from dotenv import load_dotenv
-from openai import OpenAI
+import openai
+
 from difflib import get_close_matches
 
 app = Flask(__name__)
